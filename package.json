@@ -1,0 +1,46 @@
+{
+  "name": "lolita",
+  "version": "0.0.0",
+  "description": "NodeJs / Javascript commenting system",
+  "main": "app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ishmaelthedestroyer/lolita"
+  },
+  "keywords": [
+    "blog",
+    "comments",
+    "javascript",
+    "node"
+  ],
+  "author": "ishmaelthedestroyer",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/ishmaelthedestroyer/lolita/issues"
+  },
+  "homepage": "https://github.com/ishmaelthedestroyer/lolita",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "express": "~3.4.8",
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-recess": "~0.3.0",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-coffeelint": "~0.0.6",
+    "grunt-bump": "~0.0.6",
+    "grunt-concurrent": "~0.4.2",
+    "grunt-nodemon": "~0.1.2",
+    "grunt-todos": "~0.2.0"
+  }
+}
