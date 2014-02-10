@@ -11,13 +11,17 @@ module.exports = (grunt) ->
 
     files:
       client: [
+        'src/js/helpers.*'
+        'src/js/private.*'
         'src/js/lolita.*'
       ]
       css: [
+        'src/css/fonts.css'
+        'src/css/avatar.css'
         'src/css/lolita.css'
       ]
       img: [
-        'src/img/**'
+        'img/**'
       ]
 
   # load tasks
@@ -99,13 +103,12 @@ module.exports = (grunt) ->
 
     copy:
       img:
-        files: [
-          src: [
-            '<%= files.img %>'
-          ]
-          dest: '<%= dir.dist %>/img'
-          cwd: '.'
+        cwd: 'src/'
+        expand: true
+        src: [
+          '<%= files.img %>'
         ]
+        dest: '<%= dir.dist %>'
 
     # directories to clean when `grunt clean` is executed
     clean:
@@ -125,15 +128,13 @@ module.exports = (grunt) ->
     coffee:
       client:
         options:
-          bare: true
           join: true
+          separator: ';'
           sourceMap: true
-        cwd: '.'
         src: [
           '<%= files.client %>'
         ]
-        dest: '<%= dir.dist %>/js/lolita.js'
-        ext: '.js'
+        dest: '<%= dir.dist %>js/lolita.js'
         filter: (filename) ->
           split = filename.split '.'
           ext = split[split.length - 1]
@@ -145,7 +146,7 @@ module.exports = (grunt) ->
         src: [
           '<%= files.css %>'
         ]
-        dest: '<%= dir.dist %>/css/lolita.css'
+        dest: '<%= dir.dist %>css/lolita.css'
         options:
           compile: true
           compress: false

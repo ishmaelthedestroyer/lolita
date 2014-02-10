@@ -1,0 +1,135 @@
+.lolita-comment-author {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+
+
+.lolita-wrapper {
+  display: block;
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  background: #fff;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.lolita-comments {
+  display: block;
+  padding: 0;
+}
+
+.lolita-comment,
+.lolita-comments .lolita-comment,
+.lolita-comments .lolita-comment .lolita-comment {
+  position: relative;
+  display: block;
+}
+
+.lolita-comments .lolita-comment .lolita-comment {
+  margin-left: 65px;
+}
+
+.lolita-comment .lolita-avatar-wrapper {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.44);
+     -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.44);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.44);
+  -webkit-transition: all 0.4s linear;
+     -moz-transition: all 0.4s linear;
+      -ms-transition: all 0.4s linear;
+       -o-transition: all 0.4s linear;
+          transition: all 0.4s linear;
+}
+
+.lolita-comment .lolita-avatar-wrapper:hover {
+  opacity: 0.7;
+}
+
+.lolita-comment .lolita-avatar-wrapper .lolita-avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.lolita-comment .lolita-comment-wrapper {
+  display: block;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.lolita-comment .lolita-comment-wrapper:before {
+  position: absolute;
+  top: 15px;
+  left: 60px;
+  width: 10px;
+  height: 10px;
+  background: #F3EEE9;
+  border-color: #e5e5e5;
+  border-style: solid;
+  border-width: 0 0 1px 1px;
+  content: "";
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+}
+
+.lolita-comment .lolita-comment-header {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  margin: 0;
+  background-color: #F3EEE9;
+}
+
+.lolita-comment .lolita-comment-body {
+  padding: 10px;
+  background: #fff;
+}
+
+.lolita-divide,
+.lolita-clear,
+.lolita-clear-10,
+.lolita-clear-20 {
+  clear: both;
+}
+
+.lolita-divide {
+  width: 100%;
+  height: 1px;
+  margin: 50px 0 50px 0;
+  border-top: 2px solid #ddd;
+}
+
+.lolita-clear-10 {
+  margin-bottom: 10px;
+}
+
+.lolita-clear-20 {
+  margin-bottom: 20px;
+}
+
+.lolita-img-loading {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  background-image: url(../img/loading.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+}

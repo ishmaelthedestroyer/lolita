@@ -1,7 +1,7 @@
 {
   "name": "lolita",
   "version": "0.0.0",
-  "description": "NodeJs / Javascript commenting system",
+  "description": "NodeJs / Javascript threaded commenting system.",
   "main": "app.js",
   "scripts": {},
   "repository": {

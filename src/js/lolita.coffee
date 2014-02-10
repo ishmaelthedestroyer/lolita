@@ -1,54 +1,51 @@
-((w, d) ->
+# # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # #
 
-  # # # # # # # # # # # # # # # # # # # #
-  # # # # # # # # # # # # # # # # # # # #
+Lolita = (container, options) ->
+  if !(@ instanceof Lolita)
+    return new Lolita container, options
 
-  # Basic Helper Functions
+  @_container = container
 
-  trim = (text) ->
-    return text.replace /^\s+|\s+$/g,""
+  # set and extend defaults
+  defaults =
+    api:
+      list: '/api/comments'
+      create: '/api/comments'
+      find: '/api/comments/:id'
+      update: '/api/comments/:id'
+      remove: '/api/comments/:id'
+    autoload: true
+    escapeHTML: true
+    escapeJavascript: true
+    maxDepth: 5
+    comments: []
 
-  # # # # # # # # # #
+  @_options = extend defaults, options || {}
+  # # # # #
 
-  nl2br = (str) ->
-    return str.replace /\n/g, '<br />'
+  # call function to initialize elements
+  _init @
 
-  # # # # # # # # # #
+  return @
 
-  br2nl = (str) ->
-    return str.replace /<br\s*\/?>/mg,'\n'
+# # # # # # # # # #
 
-  # # # # # # # # # #
+Lolita::clear = () ->
+  @_comments = []
+  _clearAll @
 
-  extend = (one, two) ->
-    # make sure valid objects
-    return {} if !one
-    return one if !two or typeof two isnt 'object'
+  return @
 
-    # get keys in object two
-    keys = Object.keys two
+# # # # # # # # # #
 
-    # iterate over keys, add to object one
-    one[k] = two[k] for k in keys
+Lolita::load = (comments, push) ->
+  if !push
+    @_comments = comments
+  else
 
-    # return object
-    return one
+# # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # #
 
-  # # # # # # # # # # # # # # # # # # # #
-  # # # # # # # # # # # # # # # # # # # #
-
-  # Lolita | Self-hosted comments
-
-  Lolita = (container, options) ->
-    if !(@ instanceof Lolita)
-      return new Lolita container, options
-
-    return @
-
-  # # # # # # # # # # # # # # # # # # # #
-  # # # # # # # # # # # # # # # # # # # #
-
-  # expose to window
-  window.Lolita = Lolita
-
-) window, document
+# expose to window
+window.Lolita = Lolita
